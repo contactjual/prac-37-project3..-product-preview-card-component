@@ -1,0 +1,129 @@
+:root {
+    --fontMontserrat: "Montserrat", sans-serif;
+    --fontFraunces: "Fraunces", serif;
+
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --verydarkBlue: hsl(212, 21%, 14%);
+    --DarkgrayishBlue: hsl(228, 12%, 48%);
+    --white-color: hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: var(--fontMontserrat);
+    font-weight: 400;
+    font-size: 14px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontFraunces);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+p {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+img {
+    max-width: 100%;
+}
+.card {
+    width: 600px;
+    display: flex;
+}
+.card-img {
+    flex-basis: 50%;
+}
+.card-img .desktop {
+    border-radius: 10px 0 0 10px;
+    display: block;
+}
+.card-img .mobile {
+    border-radius: 10px 10px 0 0;
+    display: none;
+}
+.card-text {
+    flex-basis: 50%;
+    background-color: var(--white-color);
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+}
+.card-text h2 {
+    color: var(--verydarkBlue);
+    font-size: 32px;
+}
+.card-text h6 {
+    color: var(--DarkgrayishBlue);
+    font-family: var(--fontMontserrat);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.card-text p {
+    font-size: 14px;
+    color: var(--DarkgrayishBlue);
+    line-height: 1.5em;
+}
+.card-text .price {
+    font-family: var(--fontFraunces);
+    color: var(--darkCyan);
+    font-size: 32px;
+}
+.card-text .price span {
+    font-family: var(--fontMontserrat);
+    color: var(--DarkgrayishBlue);
+    font-size: 14px;
+    text-decoration: line-through;
+    position: relative;
+    top: -5px;
+}
+.card-text button {
+    background-color: var(--darkCyan);
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white-color);
+}
+.card-text button img {
+    display: inline-block;
+    padding-right: 10px;
+    position: relative;
+    top: 3px;
+}
+
+
+/* responsive */
+@media screen and (max-width: 600px) {
+    body {
+        align-items: start;
+    }
+    .card {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .card-img .desktop {
+        display: none;
+    }
+    .card-img .mobile {
+        display: block;
+    }
+    .card-text {
+        border-radius: 0 0 10px 10px;
+    }
+}
